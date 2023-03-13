@@ -1,9 +1,8 @@
+'''
+@author: Daniil Ivanov
+@note: Turtle run for the ocean
+'''
 from turtle import *
-
-speed(0)
-move_distance = 20
-width = window_width()
-height = window_height()
 
 def draw_map():
     bgcolor("orange")
@@ -53,8 +52,15 @@ def check_goal():
         write("YOU WIN")
 
 if __name__ == "__main__":
+    speed(0)
+
+    move_distance = 20
+    width = window_width()
+    height = window_height()
+
     draw_map()
     reset()
+    
     onkey(move_up, "Up")
     onkey(move_left, "Left")
     onkey(move_right, "Right")

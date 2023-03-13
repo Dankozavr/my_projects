@@ -1,11 +1,9 @@
+'''
+@author: Daniil Ivanov
+@note: Drawing starry space
+'''
 from random import *
 from turtle import *
-
-speed(0)
-bgcolor("black")
-number_of_stars = 100
-width = window_width()
-height = window_height()
 
 def generate_numbers():
     position_x = randrange(round(-width / 2), round(width / 2))
@@ -19,6 +17,14 @@ def draw_star(x, y, size):
     pendown()
     dot(size, "white")
 
-for i in range(number_of_stars):
-    x, y, size = generate_numbers()
-    draw_star(x, y, size)
+if __name__ == "__main__":
+    speed(0)
+    bgcolor("black")
+    
+    number_of_stars = 100
+    width = window_width()
+    height = window_height()
+
+    for i in range(number_of_stars):
+        x, y, size = generate_numbers()
+        draw_star(x, y, size)
