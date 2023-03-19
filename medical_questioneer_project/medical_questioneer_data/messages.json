@@ -17,5 +17,9 @@
     "file_diagnosis": "\nFiling patient's diagnosis...\n",
     "patient_list_empty": "Patient list is empty\n",
     "listing_patients": "Listing patients and diagnosis...\n",
-    "new_diagnosis": "Starting a new diagnosis...\n"
+    "new_diagnosis": "Starting a new diagnosis...\n",
+    "invalid_name": "Invalid name format, name must not contain symbols or numbers.\nPress any key to re-enter patient's name...",
+    "invalid_surname": "Invalid surname format, surname must not contain symbols or numbers.\nPress any key to re-enter patient's surname...",
+    "invalid_dob": "Invalid DOB format, DOB must must follow DD/MM/YYYY format.\nPress any key to re-enter patient's surname...",
+    "invalid_email": "Invalid email format.\nPress any key to re-enter patient's surname..."
 }
