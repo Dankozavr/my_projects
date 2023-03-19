@@ -1,0 +1,11 @@
+{
+    "2964043a65e24d16b194a08ef74a40d0": {
+        "name": "Bob",
+        "surname": "Ross",
+        "dob": "12/12/1992",
+        "email": "bobross@gmail.com",
+        "diagnosis": {
+            "19/03/2023 21:30:50": "The patient suffers from severe dehidration"
+        }
+    }
+}

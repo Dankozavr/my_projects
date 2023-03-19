@@ -1,0 +1,21 @@
+{
+    "welcome_message": "Welcome Doctor, what would you like to do today?\n\nTo list all patients, press 1\nTo run a new diagnosis, press 2\nTo exit, press q\n",
+    "name_prompt": "What's the patient's name?\n",
+    "surname_prompt": "What's the patient's surname?\n",
+    "dob_prompt": "What's the patient's DOB (DD/MM/YYYY)?\n",
+    "email_prompt": "What's the patient's email?\n",
+    "unrecognised_input": "Unrecognised input, please press any key to try again...",
+    "patient_exists": "Patient with same details was found in the system.\nIs this an existing patient? (Y/N)\n",
+    "appearance_prompt": "What is the patient's general appearance?\n - 1. Normal appearance\n - 2: Irritable or lethargic\n",
+    "eyes_prompt": "How sunken are patient's eyes?\n - 1. Normal / slightly sunken\n - 2: Very sunken\n",
+    "skin_prompt": "How is patient's skin when you pinch it?\n - 1. Normal skin pinch\n - 2: Slow skin pinch\n",
+    "cant_add_patient": "Can't add new patient with provided details. Press any key to return to main menu...",
+    "no_dehidration": "The patient does not suffer from dehidration",
+    "some_dehidration": "The patient suffers from mild dehidration",
+    "severe_dehidration": "The patient suffers from severe dehidration",
+    "return_to_menu": "Press any key to return to menu...",
+    "file_diagnosis": "\nFiling patient's diagnosis...\n",
+    "patient_list_empty": "Patient list is empty\n",
+    "listing_patients": "Listing patients and diagnosis...\n",
+    "new_diagnosis": "Starting a new diagnosis...\n"
+}
