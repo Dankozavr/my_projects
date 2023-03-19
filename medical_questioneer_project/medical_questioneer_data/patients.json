@@ -16,5 +16,14 @@
         "diagnosis": {
             "19/03/2023 22:30:51": "The patient suffers from severe dehidration"
         }
+    },
+    "a7edef9d049e40a8a9b5650663b43e48": {
+        "name": "Tom",
+        "surname": "Farmer",
+        "dob": "11/08/2012",
+        "email": "tomfarmer@outlook.com",
+        "diagnosis": {
+            "19/03/2023 22:33:29": "The patient suffers from mild dehidration"
+        }
     }
 }
