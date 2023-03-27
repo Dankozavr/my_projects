@@ -15,32 +15,32 @@ class Game:
         
         self.clock = pygame.time.Clock()
         
-        self.backbround = GameObject(0, 0, 800, 800, "treasure_walk_game/assets/background.png")
-        self.treasure = GameObject(375, 50, 50, 50, "treasure_walk_game/assets/treasure.png")
+        self.backbround = GameObject(0, 0, 800, 800, "assets/background.png")
+        self.treasure = GameObject(375, 50, 50, 50, "assets/treasure.png")
 
         self.level = 1.0
 
         self.reset_map()
         
     def reset_map(self):
-        self.player = Player(375, 700, 60, 60, "treasure_walk_game/assets/player.png", 5)
+        self.player = Player(375, 700, 60, 60, "assets/player.png", 5)
 
         speed = 5 + (self.level * 2)
 
         if self.level >= 4.0:
             self.enemies = [
-                Enemy(50, 600, 50, 50, "treasure_walk_game/assets/enemy1.png", speed),
-                Enemy(750, 400, 50, 50, "treasure_walk_game/assets/enemy2.png", speed),
-                Enemy(50, 200, 50, 50, "treasure_walk_game/assets/enemy3.png", speed)
+                Enemy(50, 600, 50, 50, "assets/enemy1.png", speed),
+                Enemy(750, 400, 50, 50, "assets/enemy2.png", speed),
+                Enemy(50, 200, 50, 50, "assets/enemy3.png", speed)
             ]
         elif self.level >= 2:
             self.enemies = [
-                Enemy(50, 600, 50, 50, "treasure_walk_game/assets/enemy1.png", speed),
-                Enemy(750, 400, 50, 50, "treasure_walk_game/assets/enemy2.png", speed),
+                Enemy(50, 600, 50, 50, "assets/enemy1.png", speed),
+                Enemy(750, 400, 50, 50, "assets/enemy2.png", speed),
             ]
         else:
             self.enemies = [
-                Enemy(50, 600, 50, 50, "treasure_walk_game/assets/enemy1.png", speed),
+                Enemy(50, 600, 50, 50, "assets/enemy1.png", speed),
             ]
     
     def draw_game_objects(self):
@@ -53,6 +53,20 @@ class Game:
         for enemy in self.enemies:
             self.game_window.blit(enemy.image, (enemy.x, enemy.y))
         pygame.display.update()
+
+    def handle_events(self):
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.QUIT:
+                return
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP:
+                    player_direction = -1
+                elif event.key == pygame.K_DOWN:
+                    player_direction = 1
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                    player_direction = 0
 
     def move_objects(self, player_direction):
         self.player.move(player_direction, self.height)
@@ -88,18 +102,7 @@ class Game:
         player_direction = 0
         while True:
             # Handle events
-            events = pygame.event.get()
-            for event in events:
-                if event.type == pygame.QUIT:
-                    return
-                elif event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_UP:
-                        player_direction = -1
-                    elif event.key == pygame.K_DOWN:
-                        player_direction = 1
-                elif event.type == pygame.KEYUP:
-                    if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
-                        player_direction = 0
+            self.handle_events()
 
             # Execute logic
             self.move_objects(player_direction)

@@ -16,7 +16,7 @@ class Enemy(GameObject):
             self.speed = -self.speed
             self.turn()
         self.x += self.speed
-        self.y = 10 * math.sin(self.x / 20) + self.initial_y
+        self.y = 10 * math.sin(self.x / 40) + self.initial_y
         self.hitbox_x += self.speed
     
     def turn(self):
